@@ -12,10 +12,9 @@ class Node{
 };
 
 void print(Node *head){
-    Node *temp = head;
-    while(temp != NULL){
-        cout<<temp -> data<<" ";
-        temp = temp -> next;
+    while(head != NULL){
+        cout<<head -> data<<" ";
+        head = head -> next;
     }
 }
 

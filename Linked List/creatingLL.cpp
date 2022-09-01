@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
-
 class Node{
     public:
-    int data;
-    Node* next;
+        int data;
+        Node *next;
 
-    // Constructor
+    //Constructor
     Node(int data){
         this -> data = data;
         this -> next = NULL;
@@ -14,9 +13,19 @@ class Node{
 };
 
 int main(){
+    //Creating Nodes through default constructor
+    Node n1(10);
+    Node *head = &n1;
+    
+    Node n2(20);
+    Node n3(30);
 
-    Node* node1 = new Node(10);
-    cout<< node1 -> data <<endl;
-    cout<< node1 -> next << endl;
+    //Connecting the Nodes
+    n1.next = &n2;
+    n2.next = &n3;
+
+    //Printing the LL Data
+    cout<<n1.data<<" "<<n2.data<<" "<<n3.data<<endl;
+    cout<<head -> data<<endl;
 
 }
